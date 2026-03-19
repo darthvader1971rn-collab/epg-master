@@ -295,7 +295,12 @@ CHANNELS_ONET = {
 
 # Wklej brakujące kanały do pobrania z zewnątrz: "Nazwa": ("oryginalne_id_z_zewnatrz", "ID.pl")
 CHANNELS_EXTERNAL = {
-    
+    "Canal+ Extra 1": ("3_377", "CanalPlusExtra1.pl"),
+    "Canal+ Extra 2 HD": ("3_378", "CanalPlusExtra2HD.pl"),
+    "Canal+ Extra 3 HD": ("3_379", "CanalPlusExtra3HD.pl"),
+    "Canal+ Extra 4 HD": ("3_380", "CanalPlusExtra4HD.pl"),
+    "Viaplay Sports 1": ("3_1601", "ViaplaySports1.pl"),
+    "Viaplay Sports 2": ("3_665", "ViaplaySports2.pl"),    
 }
 
 # --- INICJALIZACJA BAZY DANYCH ---
