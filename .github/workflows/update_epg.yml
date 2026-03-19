@@ -1,0 +1,35 @@
+name: Codzienna Aktualizacja EPG
+
+on:
+  schedule:
+    # Uruchamia skrypt codziennie o 02:30 UTC (03:30 czasu polskiego) 
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+    # Pozwala na ręczne uruchomienie kliknięciem guzika "Run workflow" na stronie 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pobieranie repozytorium
+        uses: actions/checkout@v3
+
+      - name: Konfiguracja środowiska Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalacja wymaganych bibliotek
+        run: pip install requests beautifulsoup4
+
+      - name: Uruchomienie skryptu EPG
+        run: python onet_epg_master.py
+
+      - name: Zapis i wysłanie gotowego pliku do repozytorium
+        run: |
+          git config --global user.name "EPG-Bot"
+          git config --global user.email "bot@epg.local"
+          git add epg_onet.xml.gz epg_baza.db
+          git commit -m "Automatyczna aktualizacja EPG" || echo "Brak zmian do zapisu"
+          git push
