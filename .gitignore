@@ -1,0 +1,21 @@
+# Python - standard
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Moje ciężkie pliki i bazy (EPG / Nagrywarka)
+data/
+Nagrania/
+*.db
+*.xml
+*.json
+*.bak
+*.rar
+*.zip
+*.gz
+# Logi i pliki tymczasowe
+*.log
+pip-log.txt
