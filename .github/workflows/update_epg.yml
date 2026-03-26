@@ -1,11 +1,11 @@
-name: Codzienna Aktualizacja EPG
+name: name: Codzienna Aktualizacja EPG
 
 on:
-  schedule:
-    # Uruchamia skrypt codziennie o 02:30 UTC (03:30 czasu polskiego) 
-    - cron: '30 2 * * *'
+  # schedule:
+  #   # Uruchamia skrypt codziennie o 02:30 UTC (03:30 czasu polskiego) 
+  #   - cron: '30 2 * * *'
   workflow_dispatch:
-    # Pozwala na ręczne uruchomienie kliknięciem guzika "Run workflow" na stronie 
+    # Pozwala na ręczne uruchomienie kliknięciem guzika "Run workflow" na stronie
 
 jobs:
   build:
